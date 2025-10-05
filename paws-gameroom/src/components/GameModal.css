@@ -1,0 +1,174 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.modal-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-info-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #000000 0%, #DC2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-genre {
+  color: #DC2626;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.game-details {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  color: #666;
+}
+
+.detail-item strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.game-description {
+  margin-bottom: 1.5rem;
+}
+
+.game-description h3 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.game-description p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.game-rules {
+  margin-top: 2rem;
+}
+
+.rules-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #000000 0%, #DC2626 100%);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(220, 38, 38, 0.3);
+}
+
+.rules-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-body {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .modal-image-section {
+    text-align: center;
+  }
+  
+  .modal-image-section img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .modal-info-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .game-details {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

@@ -1,0 +1,291 @@
+.info {
+  animation: fadeIn 0.5s ease-in;
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.info h1 {
+  color: #2d2d2d;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.about-section,
+.contact-section,
+.pricing-section,
+.rules-section,
+.faq-section,
+.social-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2,
+.contact-section h2,
+.pricing-section h2,
+.rules-section h2,
+.faq-section h2,
+.social-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.about-section h2:after,
+.contact-section h2:after,
+.pricing-section h2:after,
+.rules-section h2:after,
+.faq-section h2:after,
+.social-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #DC2626;
+  border-radius: 2px;
+}
+
+.about-section p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.contact-item h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.pricing-highlight {
+  background: linear-gradient(135deg, #000000 0%, #DC2626 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.pricing-highlight h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.pricing-highlight p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-card {
+  background: #f8f8f8;
+  color: #333;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid #e5e5e7;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #DC2626;
+}
+
+.pricing-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.price-note {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.access-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.access-list li {
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.access-list li:last-child {
+  border-bottom: none;
+}
+
+.pricing-note {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.pricing-note p {
+  color: #333;
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.pricing-note strong {
+  color: #DC2626;
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  color: #666;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.rules-list li:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #DC2626;
+  font-size: 0.8rem;
+}
+
+.rules-list li:last-child {
+  border-bottom: none;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #DC2626;
+}
+
+.faq-item h3 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  background: #DC2626;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.social-link:hover {
+  background: #B91C1C;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+@media (max-width: 768px) {
+  .info h1 {
+    font-size: 2rem;
+  }
+  
+  .about-section h2,
+  .contact-section h2,
+  .pricing-section h2,
+  .rules-section h2,
+  .faq-section h2,
+  .social-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .social-link {
+    text-align: center;
+  }
+}

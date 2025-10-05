@@ -1,0 +1,362 @@
+.calendar-container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+
+.calendar-header {
+  background: white;
+  border-bottom: 1px solid #e5e5e7;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.view-switcher {
+  display: flex;
+  background: #f5f5f7;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.view-switcher button {
+  background: transparent;
+  border: none;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.view-switcher button.active {
+  background: white;
+  color: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e5e7;
+}
+
+.nav-btn:hover {
+  background: #f5f5f7;
+}
+
+.current-date {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d1d1f;
+  min-width: 300px;
+  text-align: center;
+}
+
+.calendar-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.today-btn,
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e5e7;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.today-btn:hover,
+.filter-btn:hover {
+  background: #f5f5f7;
+}
+
+.today-btn {
+  background: #DC2626;
+  color: white;
+  border-color: #DC2626;
+}
+
+.today-btn:hover {
+  background: #B91C1C;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  background: white;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.time-column {
+  width: 80px;
+  border-right: 1px solid #e5e5e7;
+  flex-shrink: 0;
+}
+
+.time-header {
+  height: 50px;
+  border-bottom: 2px solid #e5e5e7;
+  background: #f5f5f7;
+}
+
+.time-slot {
+  height: 60px;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.time-slot span {
+  font-size: 12px;
+  color: #86868b;
+  font-weight: 500;
+}
+
+.equipment-columns {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.equipment-column {
+  min-width: 150px;
+  flex: 1;
+  border-right: 1px solid #e5e5e7;
+}
+
+.equipment-column:last-child {
+  border-right: none;
+}
+
+.equipment-header {
+  height: 50px;
+  padding: 12px 8px;
+  border-bottom: 2px solid #e5e5e7;
+  background: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.equipment-name {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot {
+  height: 60px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slot.available:hover {
+  background: #f5f5f7;
+}
+
+.slot.occupied {
+  cursor: default;
+}
+
+.reservation-block {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  border-radius: 6px;
+  padding: 6px;
+  color: white;
+  font-size: 12px;
+  overflow: hidden;
+  cursor: move;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservation-block:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-block:active {
+  cursor: grabbing;
+  opacity: 0.8;
+}
+
+.slot.drag-active.available {
+  background: #e8f4ff;
+}
+
+.slot.drag-active.available:hover {
+  background: #d1e7ff;
+  border: 2px dashed #DC2626;
+}
+
+.reservation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reservation-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reservation-time {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* Floating Action Button */
+.fab-add {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #DC2626;
+  border: none;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.fab-add:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.fab-add:active {
+  transform: scale(0.95);
+}
+
+/* Week and Month Views */
+.week-view,
+.month-view {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.week-message,
+.month-message {
+  font-size: 18px;
+  color: #86868b;
+}
+
+/* Scrollbar Styling */
+.calendar-grid::-webkit-scrollbar,
+.equipment-columns::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.calendar-grid::-webkit-scrollbar-track,
+.equipment-columns::-webkit-scrollbar-track {
+  background: #f5f5f7;
+  border-radius: 4px;
+}
+
+.calendar-grid::-webkit-scrollbar-thumb,
+.equipment-columns::-webkit-scrollbar-thumb {
+  background: #c7c7cc;
+  border-radius: 4px;
+}
+
+.calendar-grid::-webkit-scrollbar-thumb:hover,
+.equipment-columns::-webkit-scrollbar-thumb:hover {
+  background: #aeaeb2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .date-navigation {
+    order: -1;
+  }
+
+  .current-date {
+    font-size: 16px;
+    min-width: 200px;
+  }
+
+  .equipment-column {
+    min-width: 120px;
+  }
+
+  .time-column {
+    width: 60px;
+  }
+
+  .fab-add {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

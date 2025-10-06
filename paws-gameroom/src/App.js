@@ -39,9 +39,10 @@ function App() {
         <footer className="app-footer">
           <div style={{maxWidth: '1200px', margin: '0 auto'}}>
             <h3 style={{marginBottom: '1rem'}}>Paws Plays Gameroom</h3>
-            <p style={{marginBottom: '0.5rem'}}>📍 123 Gaming Street, Fun City, FC 12345</p>
-            <p style={{marginBottom: '0.5rem'}}>📞 (555) 123-4567</p>
-            <p style={{marginBottom: '1.5rem'}}>✉️ info@pawsplaysgameroom.com</p>
+            <p style={{marginBottom: '0.5rem'}}>📍 #424 Curry Student Center</p>
+            <p style={{marginBottom: '0.5rem'}}>360 Huntington Ave, Boston, MA 02115</p>
+            {/* <p style={{marginBottom: '0.5rem'}}>📞 (555) 123-4567</p>
+            <p style={{marginBottom: '1.5rem'}}>✉️ info@pawsplaysgameroom.com</p> */}
             <p style={{fontSize: '0.9rem', opacity: 0.8}}>&copy; 2024 Paws Plays Gameroom. All rights reserved.</p>
           </div>
         </footer>

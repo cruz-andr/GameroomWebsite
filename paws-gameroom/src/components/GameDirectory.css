@@ -59,6 +59,8 @@
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .games-category h2 {
@@ -75,9 +77,12 @@
 }
 
 .games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 1.5rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  position: relative;
 }
 
 .game-tile {
@@ -85,6 +90,8 @@
   transition: all 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
+  flex: 0 0 200px;
+  min-width: 200px;
 }
 
 .game-tile:hover {
@@ -169,9 +176,88 @@
   display: none;
 }
 
+/* Netflix-style scrollbar */
+.games-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.games-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.games-grid::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.games-grid::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Scroll buttons */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 100px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.scroll-button.left {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.scroll-button.right {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.scroll-button.hidden {
+  display: none;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.category-header h2 {
+  margin-bottom: 0;
+}
+
+.view-all-link {
+  color: #DC2626;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) {
-  .games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  .game-tile {
+    flex: 0 0 180px;
+    min-width: 180px;
   }
 }
 
@@ -193,9 +279,19 @@
     font-size: 0.9rem;
   }
   
+  .game-tile {
+    flex: 0 0 150px;
+    min-width: 150px;
+  }
+  
   .games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 1rem;
+  }
+  
+  .scroll-button {
+    width: 40px;
+    height: 80px;
+    font-size: 1.5rem;
   }
   
   .games-category h2 {
@@ -216,8 +312,18 @@
 }
 
 @media (max-width: 480px) {
+  .game-tile {
+    flex: 0 0 120px;
+    min-width: 120px;
+  }
+  
   .games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 0.8rem;
+  }
+  
+  .scroll-button {
+    width: 35px;
+    height: 70px;
+    font-size: 1.2rem;
   }
 }

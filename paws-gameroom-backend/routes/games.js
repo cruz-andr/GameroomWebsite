@@ -1,12 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const igdbService = require('../services/igdb');
+const bggService = require('../services/bgg');
 
 // Get all gameroom games
 router.get('/games', async (req, res) => {
   try {
-    const games = await igdbService.getGameroomGames();
-    res.json(games);
+    // Fetch video games from IGDB
+    const videoGames = await igdbService.getGameroomGames();
+    
+    // Fetch board games from BGG
+    const boardGames = await bggService.fetchBoardGames();
+    
+    // Combine the results
+    const allGames = {
+      ...videoGames,
+      boardgames: boardGames
+    };
+    
+    res.json(allGames);
   } catch (error) {
     console.error('Error fetching games:', error);
     res.status(500).json({ 

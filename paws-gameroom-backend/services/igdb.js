@@ -154,20 +154,15 @@ class IGDBService {
     // These are specific game IDs that we know we have in the gameroom
     const gameIds = {
       ps5: [
-        11198, // Spider-Man: Miles Morales
+        11198, 
         119171, // God of War Ragnarök
         119277, // Horizon Forbidden West
-        134427, // Gran Turismo 7
-        120293, // Demon's Souls
-        138669  // Ratchet & Clank: Rift Apart
+        1905, // Gran Turismo 7
+        256092, // Demon's Souls
+        138669,
+        214397 
       ],
       xbox: [
-        // 138697, // Halo Infinite
-        // 116208, // Forza Horizon 5
-        // 103333, // Gears 5
-        // 136726, // Microsoft Flight Simulator
-        // 9547,   // Sea of Thieves
-        // 112875  // Ori and the Will of the Wisps
         1905,
 135400,
 11198,

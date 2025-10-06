@@ -45,141 +45,7 @@ function GameDirectory() {
         boardgames: {
           name: 'Board Games',
           icon: '🎲',
-          games: [
-            // Keep static board games data since they're not in IGDB
-            {
-              id: 'board-1',
-              title: 'Settlers of Catan',
-              genre: 'Strategy',
-              players: '3-4 Players',
-              rating: '10+',
-              playtime: '60-90 minutes',
-              description: 'Build settlements, cities, and roads on the island of Catan as you trade resources and compete for victory.',
-              image: 'https://m.media-amazon.com/images/I/81+okm4IpfL._AC_SL1500_.jpg',
-              rules: 'https://www.catan.com/sites/default/files/2021-06/catan_5th_ed_rules_200707.pdf'
-            },
-            {
-              id: 'board-2',
-              title: 'Ticket to Ride',
-              genre: 'Strategy',
-              players: '2-5 Players',
-              rating: '8+',
-              playtime: '30-60 minutes',
-              description: 'Collect cards of various types of train cars and claim railway routes connecting cities throughout North America.',
-              image: 'https://m.media-amazon.com/images/I/91YNJM4oyhL._AC_SL1500_.jpg',
-              rules: 'https://ncdn0.daysofwonder.com/tickettoride/en/img/tt_rules_2015_en.pdf'
-            },
-            {
-              id: 'board-3',
-              title: 'Monopoly',
-              genre: 'Economic',
-              players: '2-8 Players',
-              rating: '8+',
-              playtime: '60-180 minutes',
-              description: 'Buy, sell, and scheme your way to riches in the classic property trading game.',
-              image: 'https://m.media-amazon.com/images/I/91RSg9MCGtL._AC_SL1500_.jpg',
-              rules: 'https://www.hasbro.com/common/instruct/00009.pdf'
-            },
-            {
-              id: 'board-4',
-              title: 'Pandemic',
-              genre: 'Cooperative Strategy',
-              players: '2-4 Players',
-              rating: '8+',
-              playtime: '45 minutes',
-              description: 'Work together as a team to treat infections around the world while gathering resources for cures.',
-              image: 'https://m.media-amazon.com/images/I/71CVlZKm9BL._AC_SL1024_.jpg',
-              rules: 'https://images.zmangames.com/filer_public/99/89/99890eea-4a77-4bfb-88d6-e077e1f6a5d7/zm7101_pandemic_rules.pdf'
-            },
-            {
-              id: 'board-5',
-              title: 'Scrabble',
-              genre: 'Word Game',
-              players: '2-4 Players',
-              rating: '10+',
-              playtime: '90 minutes',
-              description: 'Form words on the board using letter tiles and score points based on letter values.',
-              image: 'https://m.media-amazon.com/images/I/81Bvv1nKPJL._AC_SL1500_.jpg',
-              rules: 'https://scrabble.hasbro.com/en-us/rules'
-            },
-            {
-              id: 'board-6',
-              title: 'Risk',
-              genre: 'Strategy/War',
-              players: '2-6 Players',
-              rating: '10+',
-              playtime: '120+ minutes',
-              description: 'Conquer territories and continents in this classic game of global domination.',
-              image: 'https://m.media-amazon.com/images/I/91gZ6moCdaL._AC_SL1500_.jpg',
-              rules: 'https://www.hasbro.com/common/instruct/risk.pdf'
-            },
-            {
-              id: 'board-7',
-              title: 'Clue',
-              genre: 'Mystery/Deduction',
-              players: '3-6 Players',
-              rating: '8+',
-              playtime: '45 minutes',
-              description: 'Solve the mystery of who committed the murder, where, and with what weapon.',
-              image: 'https://m.media-amazon.com/images/I/91R6tODpufL._AC_SL1500_.jpg',
-              rules: 'https://www.hasbro.com/common/instruct/Clue_2002.PDF'
-            },
-            {
-              id: 'board-8',
-              title: 'Codenames',
-              genre: 'Word/Party',
-              players: '4-8 Players',
-              rating: '14+',
-              playtime: '15-30 minutes',
-              description: 'Two rival spymasters give one-word clues to help their teams guess words on the board.',
-              image: 'https://m.media-amazon.com/images/I/71ZHkM7fHwL._AC_SL1024_.jpg',
-              rules: 'https://czechgames.com/files/rules/codenames-rules-en.pdf'
-            },
-            {
-              id: 'board-9',
-              title: 'Chess',
-              genre: 'Strategy',
-              players: '2 Players',
-              rating: '6+',
-              playtime: '30-60 minutes',
-              description: 'The classic game of strategic warfare between two armies.',
-              image: 'https://m.media-amazon.com/images/I/71I1XJ7HWIL._AC_SL1500_.jpg',
-              rules: 'https://www.chess.com/learn-how-to-play-chess'
-            },
-            {
-              id: 'board-10',
-              title: 'Checkers',
-              genre: 'Strategy',
-              players: '2 Players',
-              rating: '6+',
-              playtime: '30 minutes',
-              description: 'Jump over opponent pieces to capture them and reach the other side to become a king.',
-              image: 'https://m.media-amazon.com/images/I/91CwTjRcmPL._AC_SL1500_.jpg',
-              rules: 'https://www.officialgamerules.org/checkers'
-            },
-            {
-              id: 'board-11',
-              title: 'Uno',
-              genre: 'Card Game',
-              players: '2-10 Players',
-              rating: '7+',
-              playtime: '30 minutes',
-              description: 'Match colors and numbers to be the first to get rid of all your cards.',
-              image: 'https://m.media-amazon.com/images/I/818a9hHEsqL._AC_SL1500_.jpg',
-              rules: 'https://www.ultraboardgames.com/uno/game-rules.php'
-            },
-            {
-              id: 'board-12',
-              title: 'Jenga',
-              genre: 'Dexterity',
-              players: '1+ Players',
-              rating: '6+',
-              playtime: '20 minutes',
-              description: 'Remove blocks from the tower and place them on top without toppling the structure.',
-              image: 'https://m.media-amazon.com/images/I/71+8uulbmvL._AC_SL1500_.jpg',
-              rules: 'https://www.jenga.com/about.php'
-            }
-          ]
+          games: data.boardgames || []
         }
       };
       
@@ -231,7 +97,7 @@ function GameDirectory() {
       <div className="game-directory">
         <h1>Game Directory</h1>
         <div style={{ textAlign: 'center', padding: '3rem' }}>
-          <p>Loading games from IGDB...</p>
+          <p>Loading games from IGDB and BoardGameGeek...</p>
         </div>
       </div>
     );

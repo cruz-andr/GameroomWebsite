@@ -1,0 +1,9 @@
+{
+  "name": "paws-gameroom-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd paws-gameroom && npm install && npm run build",
+    "start": "cd paws-gameroom && npm start"
+  }
+}

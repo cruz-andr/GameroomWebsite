@@ -5,6 +5,8 @@ import Home from './components/Home';
 import GameDirectory from './components/GameDirectory';
 import Reservations from './components/Reservations';
 import Info from './components/Info';
+import Tournaments from './components/Tournaments';
+import TournamentRegistration from './components/TournamentRegistration';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <nav className="main-nav">
               <NavLink to="/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
               <NavLink to="/games" className={({isActive}) => isActive ? "active" : ""}>Games</NavLink>
+              <NavLink to="/tournaments" className={({isActive}) => isActive ? "active" : ""}>Tournaments</NavLink>
               <NavLink to="/info" className={({isActive}) => isActive ? "active" : ""}>About</NavLink>
               <NavLink to="/reservations" className={({isActive}) => isActive ? "nav-cta" : "nav-cta"}>
                 RESERVATIONS
@@ -31,6 +34,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/games" element={<GameDirectory />} />
+            <Route path="/tournaments" element={<Tournaments />} />
+            <Route path="/tournaments/register/:id" element={<TournamentRegistration />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/info" element={<Info />} />
           </Routes>

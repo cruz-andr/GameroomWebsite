@@ -14,7 +14,9 @@ app.use(express.json());
 
 // Routes
 const gamesRoutes = require('./routes/games');
+const tournamentsRoutes = require('./routes/tournaments');
 app.use('/api', gamesRoutes);
+app.use('/api', tournamentsRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -24,6 +26,9 @@ app.get('/', (req, res) => {
       games: '/api/games',
       search: '/api/games/search/:query',
       platform: '/api/games/platform/:platform',
+      tournaments: '/api/tournaments',
+      tournamentDetails: '/api/tournaments/:id',
+      tournamentRegister: '/api/tournaments/:id/register',
       health: '/api/health'
     }
   });

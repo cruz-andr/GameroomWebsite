@@ -1,0 +1,284 @@
+.tournament-registration {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+  background: #f8f9fa;
+}
+
+.registration-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.registration-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0;
+}
+
+.registration-header h1 {
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.tournament-info h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.tournament-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.tournament-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.registration-form {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 12px 12px;
+}
+
+.form-section h3 {
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.form-note {
+  color: #4caf50;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: #e8f5e9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.required {
+  color: #f44336;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #f44336;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.submit-error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-cancel,
+.btn-submit {
+  flex: 1;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cancel {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.btn-cancel:hover {
+  background: #d0d0d0;
+}
+
+.btn-submit {
+  background: #007bff;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+.btn-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.registration-footer {
+  background: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.registration-footer h3 {
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.registration-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.registration-footer li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+}
+
+.registration-footer li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.registration-success {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.success-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+}
+
+.success-content h2 {
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.success-content p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.redirect-message {
+  margin-top: 1rem;
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.registration-error {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.registration-error h2 {
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.registration-error a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.registration-error a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .registration-header {
+    padding: 1.5rem;
+  }
+  
+  .registration-form {
+    padding: 1.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .tournament-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

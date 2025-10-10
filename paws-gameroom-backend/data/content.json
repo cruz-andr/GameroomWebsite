@@ -1,0 +1,84 @@
+{
+  "home": {
+    "hero": {
+      "title": "Paws Plays\nGameroom",
+      "subtitle": "Your ultimate gaming destination",
+      "buttons": [
+        {
+          "text": "Reservations",
+          "link": "/reservations",
+          "style": "primary"
+        },
+        {
+          "text": "Browse Games",
+          "link": "/games",
+          "style": "secondary"
+        },
+        {
+          "text": "Learn More",
+          "link": "/info",
+          "style": "secondary"
+        }
+      ]
+    },
+    "events": {
+      "title": "Upcoming Events",
+      "events": []
+    },
+    "waysToPlay": {
+      "title": "Ways to Play",
+      "subtitle": "Choose your gaming experience",
+      "options": [
+        {
+          "icon": "🎮",
+          "title": "Drop-In Gaming",
+          "description": "Walk in anytime during our open hours. First come, first served!"
+        },
+        {
+          "icon": "📅",
+          "title": "Reserve a Station",
+          "description": "Book your favorite console or PC in advance for guaranteed playtime."
+        },
+        {
+          "icon": "🏆",
+          "title": "Join Tournaments",
+          "description": "Compete in our weekly tournaments for prizes and glory!"
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Paws Plays Gameroom",
+    "sections": [
+      {
+        "title": "Our Story",
+        "content": "Founded in 2024, Paws Plays Gameroom has quickly become Northeastern University's premier gaming destination. Located in the heart of Curry Student Center, we provide students with a state-of-the-art gaming experience."
+      },
+      {
+        "title": "Our Mission",
+        "content": "We're dedicated to creating an inclusive gaming community where students can relax, compete, and connect. Whether you're a casual player or a competitive gamer, there's a place for you here."
+      },
+      {
+        "title": "What We Offer",
+        "content": "Our facility features the latest gaming consoles including PlayStation 5, Xbox Series X, and Nintendo Switch, along with high-performance gaming PCs. We host regular tournaments, game nights, and special events throughout the semester."
+      }
+    ],
+    "hours": {
+      "title": "Hours of Operation",
+      "schedule": [
+        { "day": "Monday - Thursday", "hours": "12:00 PM - 11:00 PM" },
+        { "day": "Friday", "hours": "12:00 PM - 12:00 AM" },
+        { "day": "Saturday", "hours": "10:00 AM - 12:00 AM" },
+        { "day": "Sunday", "hours": "10:00 AM - 11:00 PM" }
+      ]
+    }
+  },
+  "footer": {
+    "title": "Paws Plays Gameroom",
+    "address": {
+      "line1": "#424 Curry Student Center",
+      "line2": "360 Huntington Ave, Boston, MA 02115"
+    },
+    "copyright": "© 2024 Paws Plays Gameroom. All rights reserved."
+  }
+}

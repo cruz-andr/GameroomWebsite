@@ -1,0 +1,12 @@
+{
+  "siteName": "Paws Plays Gameroom",
+  "maintenanceMode": false,
+  "maxReservationHours": 2,
+  "allowRegistrations": true,
+  "contactEmail": "gameroom@northeastern.edu",
+  "socialLinks": {
+    "instagram": "",
+    "discord": "",
+    "twitter": ""
+  }
+}
